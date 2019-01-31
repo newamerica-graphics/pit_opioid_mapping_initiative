@@ -1,5 +1,5 @@
 import { Bar } from "@newamerica/charts";
-import { Title, ChartContainer } from "@newamerica/meta";
+import { Title, Description, ChartContainer } from "@newamerica/meta";
 import { DataTable } from "@newamerica/data-table";
 import { columns } from "./columns";
 import "./index.scss";
@@ -15,6 +15,7 @@ const settings = {
     ReactDOM.render(
       <ChartContainer style={{ maxWidth: 650, margin: "auto" }}>
         <Title>{data.meta[0].title}</Title>
+        <Description>{data.meta[0].description}</Description>
         <Bar
           data={data.bar_chart}
           height={400}
